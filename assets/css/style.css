@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Define que a largura e altura dos elementos incluirão padding e border */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 50, 50);
+}
+
+
+.wrapper {
+    display: flex; /* Define que os elementos filhos serão dispostos em um layout flexível */
+    width: 1400px; /* Largura da caixa que contém os cartões */
+    height: 600px; /* Altura da caixa */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas */
+    border-radius: 7px; /* Arredonda levemente as bordas do wrapper */
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.35); /* Adiciona uma sombra suave ao redor da caixa */
+}
+
+.card {
+    flex: 1; /* Cada cartão ocupará inicialmente o mesmo espaço, 1/5 do wrapper */
+    transition: flex 0.7s ease-in-out; /* Define uma transição suave ao alterar o tamanho do cartão */
+    cursor: pointer; /* Mostra que os cartões são clicáveis, mudando o ponteiro do mouse */
+}
+
+.card:hover {
+    flex: 2; /* Ao passar o mouse sobre um cartão, ele aumenta para ocupar 2 partes do espaço disponível */
+}
+
+.wrapper:has(div:hover) div:not(:hover) {
+    filter: grayscale(100%) brightness(50%);
+    /* Define que os elementos dentro de wrapper que não estiverem sobre efeito de hover, ficam em escala de cinza*/
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5 {
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-size: cover; /* A imagem de fundo será redimensionada para cobrir completamente o cartão */
+}
+
+.card1 {
+    background-image: url("../img/img1.png"); /* Define a imagem de fundo para o cartão 1 */
+}
+
+.card2 {
+    background-image: url("../img/img2.png"); /* Define a imagem de fundo para o cartão 2 */
+}
+
+.card3 {
+    background-image: url("../img/img3.png"); /* Define a imagem de fundo para o cartão 3 */
+}
+
+.card4 {
+    background-image: url("../img/img4.png"); /* Define a imagem de fundo para o cartão 4 */
+}
+
+.card5 {
+    background-image: url("../img/img5.png"); /* Define a imagem de fundo para o cartão 5 */
+}
